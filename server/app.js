@@ -1,17 +1,19 @@
 var express = require('express');
 // var Promise = require('bluebird');
 var path = require('path');
-
+var bodyParser = require('body-parser');
 var app = express();
+var multer = require('multer');
+
 
 app.use('/browser', express.static(path.join(__dirname, '../browser')));
 
 module.exports = app;
 
 
-// app.use('/vendor', express.static(path.join(__dirname, '../node_modules')));
-// app.use('/browser', express.static(path.join(__dirname, '../browser')));
-// app.use('/api/employees', require('./routes/api/employeesAPI.js'));
+app.use('/vendor', express.static(path.join(__dirname, '../node_modules')));
+app.use('/browser', express.static(path.join(__dirname, '../browser')));
+app.use('/api/photo', require('./routes/api/photoAPI.js'));
 // app.use('/api/products', require('./routes/api/productsAPI.js'));
 
 app.get('/', function(req, res, next){

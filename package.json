@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "CONN=mongodb://localhost/jajPhoto node ./server/server.js"
+    "start": "CONN=mongodb://localhost/jajPhoto nodemon ./server/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.5",
+    "body-parser": "^1.15.1",
     "express": "^4.13.4",
-    "multer": "^1.1.0"
+    "express-fileupload": "0.0.5",
+    "multer": "^1.1.0",
+    "util": "^0.10.3"
   }
 }
