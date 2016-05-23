@@ -4,7 +4,7 @@ var http = require('http');
 var app = require('./app.js');
 
 
-  var port = process.env.PORT || 3000;
+  var port = process.env.PORT || 5000;
   db.connect()
   .then(function(){
     console.log('Db is connected');
